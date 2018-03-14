@@ -1,18 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Hello!</title>
+    <title>Community Support</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/styles.css">
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    
+    <!-- import the webpage's javascript file -->
     <script src="/script.js" defer></script>
-  </head>
+  </head>  
   <body>
-    <h1>Hi there!</h1>
-    <p>
-      I'm your cool new webpage. Made with 
-      <a href="https://www.glitch.com">Glitch</a>
-    </p>
+    <div id="app">
+      <header>
+        <h1>CommunitySupport.show</h1>
+      </header>
+
+      <nav clas="main-nav">
+        <a class="nav-link" href="#jobs">Jobs</a>
+        <a class="nav-link" href="#trainings">Trainings</a>
+        <a class="nav-link" href="#groups">Groups</a>
+        <a class="nav-link" href="#add">Add a Listing</a>
+      </nav>
+
+      <page-section title="Jobs" slug="jobs">
+        <template v-slot:desc>With many shows and productions cancelled, finding new work can be hard. Here's a list of places to find what is currently hiring, and where to advertise if you are currently hiring.</template>
+        
+        <item title="OffStageJobs.com">For an up-to-date list of jobs available for live entertainment, check out <a href="https://offstagejobs.com">OffStageJobs.com</a></item>
+      </page-section>
+        
+      <page-section title="Trainings" slug="trainings">
+        <template v-slot:desc>Here are some trainings you can check out if you have downtime. No better way to stay current in your craft than to learn new skills.</template>
+        
+        <item title="ETC LearningStage">Until May 15th, all <a href="https://courses.etcconnect.com/">LearningStage classes from ETC</a> are free.</item>
+        
+        <item title="QLab 4 for Education">Anyone with an educational email address can get free access to QLab 4 from now until June 1st. <a href="https://twitter.com/Figure53/status/1239544820844167170">More Information</a></item>
+      </page-section>
+          
+      <page-section title="Groups" slug="groups">
+          <template v-slot:desc>These groups and communities are good places to find more resources specific to a location or skill set, as well as to communicate with other professionals.</template>
+      </page-section>
+      
+      <br><br>
+      <page-section title="Add a Listing" slug="add">
+        <template v-slot:desc>To add a new resource to this page, email <a href="mailto:info@communitysupport.show">info@communitysupport.show</a>. If you know what the words "git", "pull request", and "html" mean, you can also open you own pull request on this site's public repo found on <a href="https://github.com/redbassett/communitysupport.show">Github</a>.</template>
+      </page-section>
+    </div>
   </body>
 </html>
