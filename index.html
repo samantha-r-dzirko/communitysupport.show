@@ -1,63 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Community Support</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
-    
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
-    
-    <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
-  </head>  
-  <body>
-    <div id="app">
-      <header>
-        <h1>CommunitySupport.show</h1>
-      </header>
 
-      <nav clas="main-nav">
-        <a class="nav-link" href="#jobs">Jobs</a>
-        <a class="nav-link" href="#trainings">Trainings</a>
-        <a class="nav-link" href="#groups">Groups</a>
-        <a class="nav-link" href="#add">Add a Listing</a>
-      </nav>
+<head>
+  <title>Community Support</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <page-section title="Jobs" slug="jobs">
-        <template v-slot:desc>With many shows and productions cancelled, finding new work can be hard. Here's a list of places to find out what is currently hiring, and to advertise if you are currently hiring.</template>
-        
-        <item title="OffStageJobs.com">For an up-to-date list of jobs available for live entertainment, check out <a href="http://offstagejobs.com">OffStageJobs.com</a></item>
-      </page-section>
-        
-      <page-section title="Trainings" slug="trainings">
-        <template v-slot:desc>Stay current and in practice with these trainings.</template>
-        
-        <item title="ETC LearningStage">Until May 15th, all <a href="https://courses.etcconnect.com/">LearningStage classes from ETC</a> are free.</item>
-        
-        <item title="QLab 4 for Education">Anyone with an educational email address can get free access to QLab 4 from now until June 1st. <a href="https://twitter.com/Figure53/status/1239544820844167170">More Information</a></item>
-        
-        <item title="Lightwright 6">Lightwirght is offering a free "emergency license" from now until June 1st. <a href="https://www.mckernon.com/">Get it at their website</a></item>
-      
-        <item title="ACT Academy">ACT Lighting is offering their <a href="https://academy.actlighting.com/">ACT Academy online courses free until June 1st</a>. Use promo code "act4me" to access the course content.</item>
-      </page-section>
-          
-      <page-section title="Groups" slug="groups">
-          <template v-slot:desc>These groups and communities are good places to find more resources specific to a location or skill set, as well as to communicate with other professionals.</template>
-          
-        
-        <item title="SoundGirls.org"><a href="https://soundgirls.org/educate-and-collaborate-surviving-corona-virus/">SoundGirls.org has a large post with a whole list of resources</a>, many not industry specific. Check it out for artist relief funds, business help, and other ways to get involved beyond the entertainment community.</item>
-        
-        <item title="4Wall Blog Post"><a href="https://www.4wall.com/blog/resources-training">4Wall has put a big list of resources similar to this one on their blog</a>. Check it out for a lot of lighting related trainings and content.</item>
-      </page-section>
-      
-      <br><br>
-      <page-section title="Add a Listing" slug="add">
-        <template v-slot:desc>To add a new resource to this page, email <a href="mailto:info@communitysupport.show">info@communitysupport.show</a>. If you know what the words "git", "pull request", and "html" mean, you can also open you own pull request on this site's public repo found on <a href="https://github.com/redbassett/communitysupport.show">Github</a>.</template>
-      </page-section>
-    </div>
-  </body>
+  <!-- import the webpage's stylesheet -->
+  <link rel="stylesheet" href="/style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+
+  <!-- import the webpage's javascript file -->
+  <script src="/script.js" defer></script>
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <h1>CommunitySupport.show</h1>
+    </header>
+
+    <nav clas="main-nav">
+      <a class="nav-link" href="#jobs">Jobs</a>
+      <a class="nav-link" href="#trainings">Trainings</a>
+      <a class="nav-link" href="#groups">Groups</a>
+      <a class="nav-link" href="#add">Add a Listing</a>
+    </nav>
+
+    <page-section title="Jobs" slug="jobs" id="jobs">
+      <template v-slot:desc>With many shows and productions cancelled, finding new work can be hard. Here's a list of places to find out what is currently hiring, and to advertise if you are currently hiring.</template>
+
+      <item title="OffStageJobs.com">For an up-to-date list of jobs available for live entertainment, check out <a href="http://offstagejobs.com">OffStageJobs.com</a></item>
+    </page-section>
+
+    <page-section title="Trainings" slug="trainings" id="trainings">
+      <template v-slot:desc>Stay current and in practice with these trainings.</template>
+
+      <item title="ETC LearningStage">Until May 15th, all <a href="https://courses.etcconnect.com/">LearningStage classes from ETC</a> are free.</item>
+
+      <item title="QLab 4 for Education">Anyone with an educational email address can get free access to QLab 4 from now until June 1st. <a href="https://twitter.com/Figure53/status/1239544820844167170">More Information</a></item>
+
+      <item title="Lightwright 6">Lightwirght is offering a free "emergency license" from now until June 1st. <a href="https://www.mckernon.com/">Get it at their website</a></item>
+
+      <item title="ACT Academy">ACT Lighting is offering their <a href="https://academy.actlighting.com/">ACT Academy online courses free until June 1st</a>. Use promo code "act4me" to access the course content.</item>
+    </page-section>
+
+    <page-section title="Groups" slug="groups" id="groups">
+      <template v-slot:desc>These groups and communities are good places to find more resources specific to a location or skill set, as well as to communicate with other professionals.</template>
+
+
+      <item title="SoundGirls.org"><a href="https://soundgirls.org/educate-and-collaborate-surviving-corona-virus/">SoundGirls.org has a large post with a whole list of resources</a>, many not industry specific. Check it out for artist relief funds,
+        business help, and other ways to get involved beyond the entertainment community.</item>
+
+      <item title="4Wall Blog Post"><a href="https://www.4wall.com/blog/resources-training">4Wall has put a big list of resources similar to this one on their blog</a>. Check it out for a lot of lighting related trainings and content.</item>
+    </page-section>
+
+    <br><br>
+    <page-section title="Add a Listing" slug="add" id="add">
+      <template v-slot:desc>To add a new resource to this page, email <a href="mailto:info@communitysupport.show">info@communitysupport.show</a>. If you know what the words "git", "pull request", and "html" mean, you can also open you own pull
+        request on this site's public repo found on <a href="https://github.com/redbassett/communitysupport.show">Github</a>.</template>
+    </page-section>
+  </div>
+</body>
+
 </html>
